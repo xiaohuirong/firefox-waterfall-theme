@@ -7,6 +7,8 @@
 
 ![Preview Image showing both the one-line style and the style for smaller screensizes.](assets/preview.png)
 
+</div>          
+
 Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen.
 What you get is a really simple one-line layout using the new Proton UI.
           

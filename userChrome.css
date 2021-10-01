@@ -1,31 +1,34 @@
-/*==============================================================================================*
+/*========================================================================================================*
 
   +-----+-----+-----+-----+-----+-----+-----+
   | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
   | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
-  +-----+-----+-----+-----+-----+-----+-----+
+  +-----+-----+-----+-----+-----+-----+-----+ Mouse Edition.
 
 
-  Description:    Minimalist, Simple, Keyboard Centered and heavily based on SimpleFox. 🦊
+  Description:    Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen
                   What you get is a really simple one-line layout using the new Proton UI.
-
+		  
+		  Some minor tweaks includes :
+		  	- Showing tab close button on hover
+			- Showing window control buttons
+			- showing the hamburger menu button
+			- color changes for added contrast
+			- inactive & active tab size
+		  
+		  The original Cascade Theme by Andreas Grafen was based on SimpleFox :
                   > SimpleFox: https://github.com/migueravila/SimpleFox
 
                   
-  Author:         Andreas Grafen
+  Authors:        Andreas Grafen (original cascade theme)
                   (https://andreas.grafen.info)
+		  Clément Rambaud (minor tweaks on the original file)
 
                   
-  Repository:     https://github.com/andreasgrafen/ag.proton
+  Repository:     https://github.com/andreasgrafen/cascade
+  		  https://github.com/crambaud/cascade
 
-
-                  Thank you Nick for all the great suggestions for improvements! ♡
-                  (https://github.com/nicksundermeyer)
-
-*==============================================================================================*/
-
-
-
+*========================================================================================================*/
 
 
 /*---+---+---+---+---+---+
@@ -48,8 +51,8 @@
   
     /* Theme Colour Suggestions
      *                              Dark        Light   */
-    --window-colour:               #1E2021; /* #FAFAFC; */
-    --secondary-colour:            #191B1C; /* #EAEAEC; */
+    --window-colour:               #1f2122; /* #FAFAFC; */
+    --secondary-colour:            #141616; /* #EAEAEC; */
     --inverted-colour:             #FAFAFC; /* #1E2021; */
 
      
@@ -65,7 +68,7 @@
      
     
     /* URL colour in URL bar suggestions */
-    --urlbar-popup-url-color: var(--uc-identity-color-purple) !important;
+    --urlbar-popup-url-color: var(--uc-identity-color-blue) !important;
      
      
      
@@ -77,20 +80,20 @@
     --uc-border-radius: 0;
      
     /* dynamic url bar width settings */
-    --uc-urlbar-width: clamp(200px, 40vw, 500px);
+    --uc-urlbar-width: clamp(250px, 45vw, 520px);
 
     /* dynamic tab width settings */
-    --uc-active-tab-width:   clamp(100px, 20vw, 300px);
+    --uc-active-tab-width:   clamp( 75px, 18vw, 260px);
     --uc-inactive-tab-width: clamp( 50px, 15vw, 200px);
 
     /* if active always shows the tab close button */
     --show-tab-close-button: none; /* DEFAULT: -moz-inline-box; */ 
 
     /* if active only shows the tab close button on hover*/
-    --show-tab-close-button-hover: none; /* DEFAULT: -moz-inline-box; */
-     
+    --show-tab-close-button-hover: -moz-inline-box; /* DEFAULT: -moz-inline-box; */
+
     /* adds left and right margin to the container-tabs indicator */
-    --container-tabs-indicator-margin: 10px;
+    --container-tabs-indicator-margin: 0px;
 
 }
 
@@ -107,8 +110,8 @@
      /* zoom indicator */
      #urlbar-zoom-button { display: none !important; }
 
-     /*  hides context burger menu BUT causes popups to be buggy at times */
-     #PanelUI-button { display: none !important; }
+     /* Show Hamburger Menu */
+     #PanelUI-button { display: -moz-inline-box !important;}
 
      #reader-mode-button{ display: none !important; }
 
@@ -116,7 +119,7 @@
      #tracking-protection-icon-container { display: none !important; }
 
      /* #identity-box { display: none !important } /* hides encryption AND permission items */
-     #identity-permission-box { display: none !important; } /* only hodes permission items */
+     #identity-permission-box { display: none !important; } /* only hides permission items */
 
      /* e.g. playing indicator (secondary - not icon) */
      .tab-secondary-label { display: none !important; }
@@ -211,15 +214,12 @@ window,
 #bookmarks-toolbar-button:not(:hover) { filter: grayscale(1) !important; }
 
 
-/* remove window control buttons */
-.titlebar-buttonbox-container { display: none !important; }
+/* Show Window Control Button */
+.titlebar-buttonbox-container { display: -moz-inline-box !important; }
 
 
 /* remove "padding" left and right from tabs */
 .titlebar-spacer { display: none !important; }
-
-
-
 
 
 /* remove gap after pinned tabs */

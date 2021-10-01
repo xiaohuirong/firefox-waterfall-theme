@@ -18,7 +18,12 @@ Some minor tweaks includes :
 - hamburger menu button
 - color changes for added contrast
 - inactive & active tab size
-          
+
+Future Improvements :
+- Background color on download box or main password prompt
+- 
+
+
 The original Cascade Theme by Andreas Grafen was based on SimpleFox :
       > SimpleFox: https://github.com/migueravila/SimpleFox
 

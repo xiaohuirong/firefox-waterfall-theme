@@ -5,14 +5,25 @@
 | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
 +-----+-----+-----+-----+-----+-----+-----+</pre></h1>
 
-<b>Minimalist, Simple, Keyboard Centered and heavily based on SimpleFox. 🦊</b>
-</div>
-
 ![Preview Image showing both the one-line style and the style for smaller screensizes.](assets/preview.png)
 
-Cascade is a Firefox Theme based on [SimpleFox](https://github.com/migueravila/SimpleFox).
-This theme was known previously as "ag.proton"—but let's be honest: That sounds hella boring.
-What you get is a really simple one-line layout that works well with the new Proton UI.
+Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen.
+What you get is a really simple one-line layout using the new Proton UI.
+          
+Some minor tweaks includes :
+- tab close button on hover
+- window control buttons
+- hamburger menu button
+- color changes for added contrast
+- inactive & active tab size
+          
+The original Cascade Theme by Andreas Grafen was based on SimpleFox :
+      > SimpleFox: https://github.com/migueravila/SimpleFox
+
+                  
+Authors:       
+- Andreas Grafen (original cascade theme) (https://andreas.grafen.info)
+- Clément Rambaud (minor tweaks on the original file for a more mouse-centered use)
 
 On larger window resolutions Cascade will have a oneline layout which displays the URL bar and tab list next to each other. Smaller resultions will stack both UI elements on top of each other for better readability.
 

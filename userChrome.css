@@ -34,18 +34,23 @@
 
 
  :root {
-
+    
     /*---+---+---+---+---+---+---+
      | C | O | L | O | U | R | S |
      +---+---+---+---+---+---+---*/
 
-    /* Comment this block out if you want to keep the default theme colour. */
-    /* This will also work with custom colours from color.firefox.com. */
+    /* Comment the color theme you don't want to use */
 
-    /* Theme Colour Suggestions */
+    /* Dark Theme Colors */
+    --window-colour:               #1f2122;
+    --secondary-colour:            #141616;
+    --inverted-colour:             #FAFAFC;
+
+    /* Light Theme Colors
     --window-colour:               #FAFAFC;
     --secondary-colour:            #EAEAEC;
     --inverted-colour:             #1E2021;
+    */
 
      
     /* Containter Tab Colours */
@@ -96,6 +101,8 @@
      /* showing only the back button */
      #back-button{ display: -moz-inline-box !important; }
      #forward-button{ display: none !important; }
+     #stop-button{ display: none !important; }
+     #reload-button{ display: none !important; }
 
      /* bookmark icon */
      #star-button{ display: none !important; }

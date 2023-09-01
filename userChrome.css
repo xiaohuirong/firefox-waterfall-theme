@@ -84,11 +84,17 @@
 
   /* adds left and right margin to the container-tabs indicator */
   --container-tabs-indicator-margin: 0px;
+
+  --tab-min-height: 30px !important; /* adjust */
+  --tab-max-height: 30px !important; /* adjust */
 }
 
 /*---+---+---+---+---+---+---+
      | B | U | T | T | O | N | S |
      +---+---+---+---+---+---+---*/
+.all-tabs-item[selected] > .all-tabs-button {
+    color: #4FC3F7;
+}
 
 /* showing only the back button */
 #back-button {
@@ -196,7 +202,7 @@
   --autocomplete-popup-highlight-color: var(--uc-inverted-colour) !important;
   --autocomplete-popup-hover-background: var(--uc-inverted-colour) !important;
 
-  --tab-block-margin: 2px !important;
+  --tab-block-margin: 0px !important;
 }
 
 window,
@@ -236,6 +242,14 @@ window,
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start: 0 !important;
+}
+
+/* TABS: height */
+#tabbrowser-tabs,
+#tabbrowser-tabs > #tabbrowser-arrowscrollbox,
+.tabbrowser-tabs .tabbrowser-tab {
+  min-height: calc(var(--tab-min-height) - 1px) !important;
+  max-height: calc(var(--tab-max-height) - 1px) !important;
 }
 
 /* remove tab shadow */
@@ -300,7 +314,11 @@ window,
 }
 
 /* style and position speaker icon */
-.tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+.tab-icon-overlay:not([sharing], [crashed]):is(
+    [soundplaying],
+    [muted],
+    [activemedia-blocked]
+  ) {
   stroke: transparent !important;
   background: transparent !important;
   opacity: 1 !important;
@@ -314,12 +332,20 @@ window,
 
 /* change the colours of the speaker icon on active tab to match tab colours */
 .tabbrowser-tab[selected]
-  .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+  .tab-icon-overlay:not([sharing], [crashed]):is(
+    [soundplaying],
+    [muted],
+    [activemedia-blocked]
+  ) {
   stroke: var(--uc-hover-colour) !important;
   background-color: var(--uc-hover-colour) !important;
 }
 
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is(
+    [soundplaying],
+    [muted],
+    [activemedia-blocked]
+  ) {
   margin-inline-end: 9.5px !important;
 }
 
@@ -376,6 +402,10 @@ window,
   border-bottom: none !important;
 }
 
+#navigator-toolbox {
+  margin-bottom: 0px !important;
+}
+
 #urlbar,
 #urlbar * {
   box-shadow: none !important;
@@ -399,7 +429,8 @@ window,
   background: var(--uc-hover-colour) !important;
 }
 
-/* transition to oneline */
+/* transition to oneline
+*/
 @media (min-width: 1000px) {
   /* move tabs bar over */
   #TabsToolbar {
@@ -408,8 +439,10 @@ window,
 
   /* move entire nav bar  */
   #nav-bar {
-    margin: calc((var(--urlbar-min-height) * -1) - 8px)
+    margin: calc((var(--urlbar-min-height) * -1))
       calc(100vw - var(--uc-urlbar-width)) 0 0 !important;
+    min-height: var(--tab-min-height) !important;
+    max-height: var(--tab-max-height) !important;
   }
 } /* end media query */
 

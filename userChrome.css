@@ -427,6 +427,7 @@ window,
 .urlbarView-row:hover > .urlbarView-row-inner,
 .urlbarView-row[selected] > .urlbarView-row-inner {
   background: var(--uc-hover-colour) !important;
+  color: #0db9d6;
 }
 
 /* transition to oneline
